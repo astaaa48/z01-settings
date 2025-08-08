@@ -97,8 +97,14 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-alias "astaaa"="gofmt -w . && gaa && gc -m \"quick_add-commit-push alias\" && gp"
-
+function asta() {
+  gofmt -w .
+  gaa
+  echo -n "Enter commit message: "
+  read msg
+  gc -m "$msg"
+  gp
+}
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
