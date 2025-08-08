@@ -97,6 +97,10 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+alias gaa="git add ."
+alias gc="git commit"
+alias gp="git push"
+
 function asta() {
   gofmt -w .
   gaa
@@ -117,3 +121,5 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# test commit
