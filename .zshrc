@@ -109,6 +109,17 @@ function asta() {
   gc -m "$msg"
   gp
 }
+function new() {
+  if [ -z "$1" ]; then
+    echo "Usage: new <name>"
+    return 1
+  fi
+  
+  mkdir -p "$1"
+  touch "$1/$1.java"
+  touch "$1/ExerciseRunner.java"
+  echo "Created folder '$1' with $1.java and ExerciseRunner.java"
+}
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
